@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/egresos_ingresos_menu"
+        android:enabled="true"
+        android:icon="@drawable/payments"
+        android:title="Egresos e Ingresos"/>
+    <item
+        android:id="@+id/crear_menu"
+        android:enabled="true"
+        android:icon="@drawable/ic_agregar"
+        android:title="Crear Ingreso e Egreso"/>
+    <item
+        android:id="@+id/resumen_menu"
+        android:enabled="true"
+        android:icon="@drawable/monitoring"
+        android:title="Resumen"/>
+    <item
+        android:id="@+id/sesion_menu"
+        android:enabled="true"
+        android:icon="@drawable/monitoring"
+        android:title="Cerrar Sesión"/>
+</menu>
