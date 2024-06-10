@@ -5,10 +5,17 @@
     android:layout_height="match_parent"
     tools:context=".Sesion">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+
+    <!-- Agrega un botón para cerrar sesión -->
+    <Button
+        android:id="@+id/buttonLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cerrar_sesi_n"
+        android:textColor="@android:color/white"
+        android:background="@color/md_theme_errorContainer_highContrast"
+        android:layout_gravity="center"/>
+
+
 
 </FrameLayout>

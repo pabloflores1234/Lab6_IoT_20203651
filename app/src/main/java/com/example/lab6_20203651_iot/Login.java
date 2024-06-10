@@ -42,7 +42,6 @@ public class Login extends AppCompatActivity {
             }
         });
 
-        // Encontrar el TextView y establecer el OnClickListener
         TextView textForgotPassword = findViewById(R.id.textRegister);
         textForgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +60,6 @@ public class Login extends AppCompatActivity {
         TextInputEditText editTextEmail = (TextInputEditText) textInputLayoutEmail.getEditText();
         TextInputEditText editTextPassword = (TextInputEditText) textInputLayoutPassword.getEditText();
 
-
         if (editTextEmail != null && editTextPassword != null) {
             String email = editTextEmail.getText().toString();
             String password = editTextPassword.getText().toString();
@@ -72,10 +70,11 @@ public class Login extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 FirebaseUser user = mAuth.getCurrentUser();
-                                startActivity(new Intent(Login.this, MainActivity.class));
+                                Intent intent = new Intent(Login.this, MainActivity.class);
+                                intent.putExtra("email", email);
+                                startActivity(intent);
                                 finish();
                             } else {
-
                                 Toast.makeText(Login.this, "Error al autenticarse",
                                         Toast.LENGTH_SHORT).show();
                             }
